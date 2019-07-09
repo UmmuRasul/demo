@@ -11,22 +11,6 @@ from django.views.generic import (
 from django.http import HttpResponse
 from .models import Post
 
-
-# posts = [
-#     {
-#         'author':'Mariam',
-#         'title':'Blog-post 1',
-#         'content':'post-content',
-#         'date_posted':'August 2019'
-#     },
-#     {
-#         'author':'Tainan',
-#         'title':'Blog-post 2',
-#         'content':'Second post-content',
-#         'date_posted':'August 2020'
-#     }
-# ]
-
 def home(request):
     context = {
         'posts':Post.objects.all()
