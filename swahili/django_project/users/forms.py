@@ -7,8 +7,8 @@ from .models import Profile
 class UserRegistrationForm(UserCreationForm):
     email = forms.EmailField()
 
-    class Meta: #gives us a nested class namespace for configuration and keeps the config in one place and model affected is user model
-        model = User #whenever form validate will create new user
+    class Meta:
+        model = User
         fields = ['username', 'email', 'password1', 'password2']
 
 
